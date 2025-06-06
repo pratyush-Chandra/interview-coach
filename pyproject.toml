@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--verbose --tb=short --cov=ml --cov-report=term-missing --cov-report=html --no-cov-on-fail"
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "slow: Tests that take longer to run",
+    "vector_store: Tests involving vector store operations",
+    "resume: Tests for resume parsing",
+    "interview: Tests for interview functionality",
+    "mcq: Tests for MCQ functionality"
+] 
