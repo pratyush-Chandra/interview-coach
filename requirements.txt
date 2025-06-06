@@ -21,7 +21,7 @@ requests
 reportlab
 kaleido
 bcrypt
-distutils
+
 
 # Optional dependencies for production
 streamlit-webrtc
