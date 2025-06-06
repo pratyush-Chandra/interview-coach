@@ -6,14 +6,20 @@ if ! command -v brew &> /dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
+# Install Python 3.9 if not already installed
+if ! command -v python3.9 &> /dev/null; then
+    echo "Installing Python 3.9..."
+    brew install python@3.9
+fi
+
 # Install system dependencies
 echo "Installing system dependencies..."
 brew install tesseract
 brew install poppler
 
-# Create and activate virtual environment
+# Create and activate virtual environment with Python 3.9
 echo "Setting up Python virtual environment..."
-python3 -m venv venv
+python3.9 -m venv venv
 source venv/bin/activate
 
 # Upgrade pip
