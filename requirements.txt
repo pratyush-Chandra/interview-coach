@@ -21,6 +21,7 @@ requests==2.31.0
 reportlab==4.0.4
 kaleido==0.2.1
 bcrypt==4.1.2
+distutils
 
 # Optional dependencies for production
 streamlit-webrtc==0.47.1
