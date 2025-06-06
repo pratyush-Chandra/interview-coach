@@ -1,3 +1,7 @@
+# Build dependencies
+setuptools>=69.0.3
+wheel>=0.42.0
+
 # Core dependencies
 streamlit==1.32.0
 plotly==5.18.0
@@ -9,8 +13,7 @@ python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 python-multipart==0.0.9
 alembic==1.13.1
-pg8000==1.30.5
-sqlalchemy[asyncio]==2.0.27
+psycopg2-binary==2.9.9
 chromadb==0.3.29
 langchain==0.1.9
 openai==1.12.0
@@ -33,5 +36,3 @@ PyMuPDF==1.23.8
 docx2txt==0.8
 SpeechRecognition==3.10.0
 gTTS==2.5.4
-# Removing openai-whisper as it's causing installation issues
-# openai-whisper==20240930
